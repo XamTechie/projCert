@@ -1,7 +1,7 @@
 FROM devopsedu/webapp
+RUN sudo chown -R /var/www/html
+ADD proj  /var/www/html
 
-ADD proj /var/www/html
-
-RUN rm /var/www/html/index.html
+RUN sudo rm /var/www/html/index.html
 
 CMD apachectl -D FOREGROUND
